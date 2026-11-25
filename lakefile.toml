@@ -1,7 +1,7 @@
 name = "PhyloCombinatorics"
 version = "0.1.0"
 keywords = ["math", "phylogenetics"]
-description = "What the formalizations of the papers on the combinatorics of phylogenetic trees share"
+description = "What the formalizations of the papers on the combinatorics of phylogenetic trees and networks share"
 defaultTargets = ["PhyloCombinatorics"]
 
 [leanOptions]

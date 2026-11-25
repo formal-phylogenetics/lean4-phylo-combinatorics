@@ -1,6 +1,6 @@
 module
 
-/-! # What the papers on the combinatorics of phylogenetic trees share
+/-! # What the papers on the combinatorics of phylogenetic trees and networks share
 
 The definitions and results that two or more of this hub's papers use, and that the root library
 `Phylogenetics` does not hold: a result that only one paper uses stays in that paper's repository,

@@ -1,6 +1,6 @@
 # PhyloCombinatorics
 
-The library of this hub: the definitions and results that two or more papers on the combinatorics of phylogenetic trees use,
+The library of this hub: the definitions and results that two or more papers on the combinatorics of phylogenetic trees and networks use,
 and that the root library [lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics) does
 not hold. Each goes to the lowest node of the tree above every repository that uses it: a result that
 one paper uses stays in that paper's repository; one that papers of several hubs use, or that
