@@ -1,6 +1,6 @@
 # The combinatorics of phylogenetic trees and networks, in Lean
 
-[![CI](https://github.com/vltanh/lean4-phylo-combinatorics/actions/workflows/ci.yml/badge.svg)](https://github.com/vltanh/lean4-phylo-combinatorics/actions/workflows/ci.yml)
+[![CI](https://github.com/formal-phylogenetics/lean4-phylo-combinatorics/actions/workflows/ci.yml/badge.svg)](https://github.com/formal-phylogenetics/lean4-phylo-combinatorics/actions/workflows/ci.yml)
 
 Lean 4 formalizations of papers on the combinatorics of phylogenetic trees and networks: how a tree
 is determined by its metric, its clusters or its lowest common ancestors, the compatibility of
@@ -8,16 +8,16 @@ characters and perfect phylogeny, the decomposition of networks with recombinati
 amalgamation of quartets, with the complexity of these problems.
 
 This repository is a hub of theory in the collection rooted at
-[lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics). It holds the library
-[`PhyloCombinatorics`](PhyloCombinatorics), for what two or more of its papers share and the root
-library does not hold. It has no modules yet; its [README](PhyloCombinatorics/README.md) says what
-goes there, and the catalog of the papers, [`catalog/papers.toml`](catalog/papers.toml), from which
-the tables below are generated.
+[lean4-phylogenetics](https://github.com/formal-phylogenetics/lean4-phylogenetics). It holds the
+library [`PhyloCombinatorics`](PhyloCombinatorics), for what two or more of its papers share and the
+root library does not hold. It has no modules yet; its [README](PhyloCombinatorics/README.md) says
+what goes there, and the catalog of the papers, [`catalog/papers.toml`](catalog/papers.toml), from
+which the tables below are generated.
 
 The collection's
-[conventions](https://github.com/vltanh/lean4-phylogenetics/blob/main/docs/CONVENTIONS.md) and
-[workflow](https://github.com/vltanh/lean4-phylogenetics/blob/main/docs/WORKFLOW.md) are in the
-root. Each paper is formalized with the
+[conventions](https://github.com/formal-phylogenetics/lean4-phylogenetics/blob/main/docs/CONVENTIONS.md) and
+[workflow](https://github.com/formal-phylogenetics/lean4-phylogenetics/blob/main/docs/WORKFLOW.md)
+are in the root. Each paper is formalized with the
 [formalize-math-paper](https://github.com/vltanh/formalize-math-paper) skill: its results are proved
 by the paper's own arguments, and an audit reports its errors and gaps.
 
@@ -72,7 +72,7 @@ Priority: high.
 | 7 | Agarwala, Fernández-Baca (1994), [A Polynomial-Time Algorithm for the Perfect Phylogeny Problem When the Number of Character States Is Fixed](https://doi.org/10.1137/S0097539793244587) | theory and algorithm | `lean4-agarwala1994` | to do | - |
 | 8 | Kannan, Warnow (1997), [A Fast Algorithm for the Computation and Enumeration of Perfect Phylogenies](https://doi.org/10.1137/S0097539794279067) | theory and algorithm | `lean4-kannan1997` | to do | - |
 | 9 | Bodlaender et al. (2000), [The Hardness of Perfect Phylogeny, Feasible Register Assignment and Other Problems on Thin Colored Graphs](https://doi.org/10.1016/S0304-3975(98)00342-9) | theory | `lean4-bodlaender2000` | to do | - |
-| 10 | Gusfield, Bansal, Bafna, Song (2007), [A Decomposition Theory for Phylogenetic Networks and Incompatible Characters](https://doi.org/10.1089/cmb.2006.0137) | theory and algorithm | [lean4-gusfield2007](https://github.com/vltanh/lean4-gusfield2007) | formalized | - |
+| 10 | Gusfield, Bansal, Bafna, Song (2007), [A Decomposition Theory for Phylogenetic Networks and Incompatible Characters](https://doi.org/10.1089/cmb.2006.0137) | theory and algorithm | [lean4-gusfield2007](https://github.com/formal-phylogenetics/lean4-gusfield2007) | formalized | - |
 
 ### 3. Quartet amalgamation and optimization
 
@@ -88,8 +88,8 @@ Priority: highest.
 
 ## Starting a paper
 
-From [lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics), when the paper's
-formalization starts:
+From [lean4-phylogenetics](https://github.com/formal-phylogenetics/lean4-phylogenetics), when the
+paper's formalization starts:
 
 ```sh
 python3 scripts/status.py next                   # the open papers, by priority
