@@ -1,0 +1,282 @@
+# The papers of this hub, one [[paper]] per repository to be, grouped by family: the combinatorics
+# of phylogenetic trees, the compatibility of characters and of trees, and the computational
+# complexity of their problems.
+#
+# Started on 2026-11-25 from the maintainer's division of the collection into hubs of inference and
+# hubs of theory. Authors, years, titles and links were checked against Crossref. Each formalization
+# records the exact citation in its Phase 0, and corrects the entry here.
+#
+# Fields of a paper:
+#   id          the repository is lean4-<id>: the method's name in lower case when the paper names
+#               one, otherwise first author and year, with a keyword when two papers would share it
+#   family      the [[family]] it belongs to (each paper is in exactly one)
+#   order       its place in the family, by priority
+#   short       the method's name, when it has one
+#   kind        "theory" (a characterization, complexity or approximation theorem),
+#               "theory+algorithm", or "method"
+#   root        the Lean package, the root of its code and, by default, the paper's name: the
+#               method's name, otherwise first author and year (lean4-phylogenetics'
+#               docs/CONVENTIONS.md, Section 2)
+#   paper       optional: the paper's name, when it is not the root (CONVENTIONS, Section 2)
+#   status      "todo", "partial" (some results are formalized elsewhere: see covered_by),
+#               "in-progress" (its repository exists), or "formalized"
+#   repo        only when the repository is not named lean4-<id>, as for papers on one topic that
+#               share a repository (CONVENTIONS, Section 3)
+#   commit      for a formalized paper: the commit that other repositories require
+#   uses        other hubs whose library its formalization requires, besides this one
+#   builds_on   ids of papers, of any hub's catalog, whose results its proofs use. Only what is known
+#               before the paper's inventory; its Phase 1 completes the list here
+#   covered_by  what is already formalized, and where
+#   note        anything else
+
+[[family]]
+id = 1
+title = "Tree characterization, compatibility and reconstruction"
+
+[[family]]
+id = 2
+title = "Perfect phylogeny and character compatibility"
+priority = "high"
+
+[[family]]
+id = 3
+title = "Quartet amalgamation and optimization"
+priority = "highest"
+
+# ---------------------------------------------------------------------------------------------
+# 1. Tree characterization, compatibility and reconstruction
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "buneman1971"
+family = 1
+order = 1
+authors = "Buneman"
+year = "1971"
+title = "The Recovery of Trees from Measures of Dissimilarity"
+url = "https://homepages.inf.ed.ac.uk/opb/homepagefiles/phylogeny-scans/manuscripts.pdf"
+kind = "theory"
+root = "Buneman1971"
+status = "partial"
+covered_by = [
+  { repo = "lean4-phylogenetics", what = "the four-point theorem, by another proof than Buneman's, and the recovery of a tree and its weights from its metric (Phylogenetics/Tree/FourPoint.lean, Phylogenetics/Tree/Metric.lean)" },
+]
+
+[[paper]]
+id = "aho1981"
+family = 1
+order = 2
+short = "BUILD"
+authors = "Aho et al."
+year = "1981"
+title = "Inferring a Tree from Lowest Common Ancestors with an Application to the Optimization of Relational Expressions (BUILD)"
+url = "https://doi.org/10.1137/0210030"
+kind = "theory+algorithm"
+root = "Aho1981"
+status = "todo"
+note = "A foundation of the collection: its reusable results go to lean4-phylogenetics, and the paper's repository formalizes the rest (docs/CONVENTIONS.md, Section 4)"
+
+[[paper]]
+id = "robinson1981"
+family = 1
+order = 3
+authors = "Robinson, Foulds"
+year = "1981"
+title = "Comparison of Phylogenetic Trees"
+url = "https://doi.org/10.1016/0025-5564(81)90043-2"
+kind = "theory"
+root = "Robinson1981"
+status = "todo"
+note = "A foundation of the collection: its reusable results go to lean4-phylogenetics, and the paper's repository formalizes the rest (docs/CONVENTIONS.md, Section 4)"
+
+[[paper]]
+id = "steel1992"
+family = 1
+order = 4
+authors = "Steel"
+year = "1992"
+title = "The Complexity of Reconstructing Trees from Qualitative Characters and Subtrees"
+url = "https://doi.org/10.1007/BF02618470"
+kind = "theory"
+root = "Steel1992"
+status = "partial"
+covered_by = [
+  { repo = "lean4-phylogenetics", what = "a tree is determined by its quartets, and every internal edge is distinguished by a quartet (Proposition 6), for trees that need not be binary (Phylogenetics/Hierarchy/Quartets.lean)" },
+]
+note = "A foundation of the collection: its reusable results go to lean4-phylogenetics, and the paper's repository formalizes the rest (docs/CONVENTIONS.md, Section 4)"
+
+[[paper]]
+id = "warnow1994"
+family = 1
+order = 5
+authors = "Warnow"
+year = "1994"
+title = "Tree Compatibility and Inferring Evolutionary History"
+url = "https://doi.org/10.1006/jagm.1994.1018"
+kind = "theory+algorithm"
+root = "Warnow1994"
+status = "todo"
+
+[[paper]]
+id = "henzinger1999"
+family = 1
+order = 6
+authors = "Henzinger, King, Warnow"
+year = "1999"
+title = "Constructing a Tree from Homeomorphic Subtrees, with Applications to Computational Evolutionary Biology"
+url = "https://doi.org/10.1007/PL00009268"
+kind = "theory+algorithm"
+root = "Henzinger1999"
+status = "todo"
+
+# ---------------------------------------------------------------------------------------------
+# 2. Perfect phylogeny and character compatibility
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "foulds1982"
+family = 2
+order = 1
+authors = "Foulds, Graham"
+year = "1982"
+title = "The Steiner Problem in Phylogeny Is NP-Complete"
+url = "https://doi.org/10.1016/S0196-8858(82)80004-3"
+kind = "theory"
+root = "Foulds1982"
+status = "todo"
+
+[[paper]]
+id = "gusfield1991"
+family = 2
+order = 2
+authors = "Gusfield"
+year = "1991"
+title = "Efficient Algorithms for Inferring Evolutionary Trees"
+url = "https://doi.org/10.1002/net.3230210104"
+kind = "theory+algorithm"
+root = "Gusfield1991"
+status = "todo"
+
+[[paper]]
+id = "kannan1992"
+family = 2
+order = 3
+authors = "Kannan, Warnow"
+year = "1992"
+title = "Triangulating 3-Colored Graphs"
+url = "https://doi.org/10.1137/0405019"
+kind = "theory+algorithm"
+root = "Kannan1992"
+status = "todo"
+
+[[paper]]
+id = "bodlaender1992"
+family = 2
+order = 4
+authors = "Bodlaender, Fellows, Warnow"
+year = "1992"
+title = "Two Strikes Against Perfect Phylogeny"
+url = "https://doi.org/10.1007/3-540-55719-9_80"
+kind = "theory"
+root = "Bodlaender1992"
+status = "todo"
+
+[[paper]]
+id = "kannan1994"
+family = 2
+order = 5
+authors = "Kannan, Warnow"
+year = "1994"
+title = "Inferring Evolutionary History from DNA Sequences"
+url = "https://doi.org/10.1137/S0097539791222171"
+kind = "theory+algorithm"
+root = "Kannan1994"
+status = "todo"
+
+[[paper]]
+id = "mcmorris1994"
+family = 2
+order = 6
+authors = "McMorris, Warnow, Wimer"
+year = "1994"
+title = "Triangulating Vertex-Colored Graphs"
+url = "https://doi.org/10.1137/S0895480192229273"
+kind = "theory+algorithm"
+root = "Mcmorris1994"
+status = "todo"
+
+[[paper]]
+id = "agarwala1994"
+family = 2
+order = 7
+authors = "Agarwala, Fernández-Baca"
+year = "1994"
+title = "A Polynomial-Time Algorithm for the Perfect Phylogeny Problem When the Number of Character States Is Fixed"
+url = "https://doi.org/10.1137/S0097539793244587"
+kind = "theory+algorithm"
+root = "Agarwala1994"
+status = "todo"
+
+[[paper]]
+id = "kannan1997"
+family = 2
+order = 8
+authors = "Kannan, Warnow"
+year = "1997"
+title = "A Fast Algorithm for the Computation and Enumeration of Perfect Phylogenies"
+url = "https://doi.org/10.1137/S0097539794279067"
+kind = "theory+algorithm"
+root = "Kannan1997"
+status = "todo"
+
+[[paper]]
+id = "bodlaender2000"
+family = 2
+order = 9
+authors = "Bodlaender et al."
+year = "2000"
+title = "The Hardness of Perfect Phylogeny, Feasible Register Assignment and Other Problems on Thin Colored Graphs"
+url = "https://doi.org/10.1016/S0304-3975(98)00342-9"
+kind = "theory"
+root = "Bodlaender2000"
+status = "todo"
+
+# ---------------------------------------------------------------------------------------------
+# 3. Quartet amalgamation and optimization
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "bryant2001"
+family = 3
+order = 1
+authors = "Bryant, Steel"
+year = "2001"
+title = "Constructing Optimal Trees from Quartets"
+url = "https://doi.org/10.1006/jagm.2000.1133"
+kind = "theory+algorithm"
+root = "Bryant2001"
+status = "todo"
+
+[[paper]]
+id = "snir2012"
+family = 3
+order = 2
+authors = "Snir, Yuster"
+year = "2012"
+title = "Reconstructing Approximate Phylogenetic Trees from Quartet Samples"
+url = "https://doi.org/10.1137/11086964X"
+kind = "theory+algorithm"
+root = "Snir2012"
+status = "todo"
+
+[[paper]]
+id = "lafond2019"
+family = 3
+order = 3
+authors = "Lafond, Scornavacca"
+year = "2019"
+title = "On the Weighted Quartet Consensus Problem"
+url = "https://doi.org/10.1016/j.tcs.2018.10.005"
+kind = "theory"
+root = "Lafond2019"
+status = "todo"
