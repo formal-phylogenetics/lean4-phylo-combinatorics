@@ -1,6 +1,6 @@
 # The papers of this hub, one [[paper]] per repository to be, grouped by family: the combinatorics
-# of phylogenetic trees, the compatibility of characters and of trees, and the computational
-# complexity of their problems.
+# of phylogenetic trees and networks, the compatibility of characters and of trees, and the
+# computational complexity of their problems.
 #
 # Started on 2026-11-25 from the maintainer's division of the collection into hubs of inference and
 # hubs of theory. Authors, years, titles and links were checked against Crossref. Each formalization
@@ -240,6 +240,20 @@ url = "https://doi.org/10.1016/S0304-3975(98)00342-9"
 kind = "theory"
 root = "Bodlaender2000"
 status = "todo"
+
+[[paper]]
+id = "gusfield2007"
+family = 2
+order = 10
+authors = "Gusfield, Bansal, Bafna, Song"
+year = "2007"
+title = "A Decomposition Theory for Phylogenetic Networks and Incompatible Characters"
+url = "https://doi.org/10.1089/cmb.2006.0137"
+kind = "theory+algorithm"
+root = "Gusfield2007"
+status = "formalized"
+commit = "bd3940001c6f030816f13191b348596763b1f146"
+note = "The source of blobs: the papers on the tree of blobs cite it (lean4-phylo-tree-of-blobs, docs/OVERVIEW.md)."
 
 # ---------------------------------------------------------------------------------------------
 # 3. Quartet amalgamation and optimization
