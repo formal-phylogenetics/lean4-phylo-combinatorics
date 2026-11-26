@@ -48,7 +48,7 @@ results go to the root library.
 ### 1. Tree characterization, compatibility and reconstruction
 
 - [ ] Buneman (1971), [The Recovery of Trees from Measures of Dissimilarity](https://homepages.inf.ed.ac.uk/opb/homepagefiles/phylogeny-scans/manuscripts.pdf), partly covered by lean4-phylogenetics
-- [ ] Aho et al. (1981), [Inferring a Tree from Lowest Common Ancestors with an Application to the Optimization of Relational Expressions (BUILD)](https://doi.org/10.1137/0210030)
+- [ ] Aho et al. (1981), [Inferring a Tree from Lowest Common Ancestors with an Application to the Optimization of Relational Expressions](https://doi.org/10.1137/0210030)
 - [ ] Robinson, Foulds (1981), [Comparison of Phylogenetic Trees](https://doi.org/10.1016/0025-5564(81)90043-2)
 - [ ] Steel (1992), [The Complexity of Reconstructing Trees from Qualitative Characters and Subtrees](https://doi.org/10.1007/BF02618470), partly covered by lean4-phylogenetics
 - [ ] Warnow (1994), [Tree Compatibility and Inferring Evolutionary History](https://doi.org/10.1006/jagm.1994.1018)
